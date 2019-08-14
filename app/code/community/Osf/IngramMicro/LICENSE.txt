@@ -1,0 +1,20 @@
+
+IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and OSF GLOBAL SERVICES for the use of OSF GLOBAL SERVICES software, which includes computer software and may include other associated media. YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE. IF YOU DO NOT AGREE, DO NOT INSTALL, COPY, OR USE THE SOFTWARE;
+
+1. RESERVATION OF RIGHTS AND OWNERSHIP. OSF GLOBAL SERVICES reserves all rights not expressly granted to you in this EULA. The Software is protected by copyright and other intellectual property laws and treaties. OSF GLOBAL SERVICES owns the title, copyright, and other intellectual property rights in the Software. The Software is licensed, not sold.
+
+2. LIMITATIONS ON REVERSE ENGINEERING, DECOMPILATION, AND DISASSEMBLY. You may not reverse engineer, decompile, or disassemble the Software
+
+3. NO RENTAL/COMMERCIAL HOSTING. You may not rent, lease, lend or provide commercial hosting services with the Software.
+
+4. LINKS TO THIRD PARTY ENTITIES OR PRODUCTS. You may link to third party entities or products through the use of the Software. The third party entities or products are not under the control of OSF GLOBAL SERVICES, and OSF GLOBAL SERVICES is not responsible for the contents or functionality of any third party entities or products. OSF GLOBAL SERVICES does not promise functionality or compatibility with any 3rd  party products, which are not mentioned explicitly in a product description
+
+5. SUPPORT, UPDATES AND UPGRADES. This licence doesn't include any support, updates and upgrades. If you would require updates, upgrades and support services you will be required to subscribe to support, updates and upgrades plan for the software. Support will include guidance regarding installation, configuration or use of software as well as fixes of software errors and bugs. Depending on the nature of the problem OSF GLOBAL SERVICES at its own discretion may agree to provide additional assistance for a fee subject to a separate written agreement.
+
+6. TERMINATION. Without prejudice to any other rights, OSF GLOBAL SERVICES may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the Software and all of its component parts. 
+
+7. LIMITED WARRANTY. FOR ANY DEFECTS THERE IS NO WARRANTY OR CONDITION OF ANY KIND.
+
+8. EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES.  IN NO EVENT SHALL OSF GLOBAL SERVICES BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, THE PROVISION OF OR FAILURE TO PROVIDE SUPPORT OR OTHER SERVICES, INFORMATON, SOFTWARE, AND RELATED CONTENT THROUGH THE SOFTWARE OR OTHERWISE ARISING OUT OF THE USE OF THE SOFTWARE, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS EULA.
+
+

@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<!--
+ * Osf Global Services
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+-->
+<config>
+	<tabs>
+		<osftab translate="label" module="osf_ingrammicro">
+			<label>Osf</label>
+			<sort_order>100</sort_order>
+		</osftab>
+	</tabs>
+	<sections>
+		<osf_ingrammicro module="osf_ingrammicro">
+			<label>Ingram Micro Configuration</label>
+			<tab>osftab</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>351</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>Ingram Micro General Configuration</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>11</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<account_number translate="label">
+							<label>Ingram Micro Account Number</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[ The account number received from Ingram Micro ]]></comment>
+						</account_number>
+						<test_mode translate="label comment">
+							<label>Test mode</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[Turning this one will set H (HOLD) as Autorelease value, "TEST PO ONLY - DO NOT SHIP as CustomerPO]]></comment>
+						</test_mode>
+						 <category_mapping_import translate="label">
+							<label>Category Mapping Import</label>
+							<frontend_type>import</frontend_type>
+							<backend_model>osf_ingrammicro/adminhtml_system_config_backend_catmap</backend_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Upload the file with the category map. For more infomation about this configuration go to user guide section "Configuration"]]></comment>
+						</category_mapping_import>
+					</fields>
+				</general>
+				<ftplogin translate="label">
+					<label>Ftp Configuration</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>11</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<ftp_host translate="label">
+							<label>Ftp Server</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[<b>Ex: </b> example.com OR ftp.example.com ]]></comment>
+						</ftp_host>
+						<ftp_user translate="label">
+							<label>Ftp Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[The FTP username used to connect to ingram micro ftp]]></comment>
+						</ftp_user>
+						<ftp_password translate="label">
+							<label>Ftp Password</label>
+							<frontend_type>password</frontend_type>
+							<backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[The FTP password used to connect to ingram micro ftp]]></comment>
+						</ftp_password>
+						<ftp_remote_dir translate="label">
+							<label>Ftp Remote Directory</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[Remote directory]]></comment>
+						</ftp_remote_dir>
+						<ftp_prod_file translate="label">
+							<label>Ftp Products Filename</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[The products file from the server]]></comment>
+						</ftp_prod_file>
+						<filtered_skus_file translate="label tooltip comment">
+                             <label>Filtered SKUs File</label>
+                             <comment>Upload the file with the selected skus</comment>
+                             <tooltip>Upload the file with the selected skus</tooltip>
+                             <frontend_type>file</frontend_type>
+                             <backend_model>adminhtml/system_config_backend_file</backend_model>
+                             <upload_dir config="system/filesystem/media" scope_info="1">admin-config-uploads</upload_dir>
+                             <base_url type="media" scope_info="1">admin-config-uploads</base_url>
+                             <sort_order>16</sort_order>
+                             <show_in_default>1</show_in_default>
+                             <show_in_website>1</show_in_website>
+                             <show_in_store>1</show_in_store>
+                        </filtered_skus_file>
+                        <manual_import translate="comment">
+                        	<label></label>
+                        	<comment>Upload the file with the selected skus</comment>
+                        	<frontend_type>button</frontend_type>
+                            <frontend_model>osf_ingrammicro/adminhtml_system_config_frontend_button</frontend_model>
+                            <sort_order>17</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </manual_import>
+					</fields>
+				</ftplogin>
+				<xmllogin translate="label">
+					<label>XML Configuration</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>12</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<xml_endpoint translate="label">
+							<label>XML Endpoint</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[<b>Ex: </b> example.com ]]></comment>
+						</xml_endpoint>
+						<xml_username translate="label">
+							<label>Xml Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[The username used to connect to ingram micro endpoint]]></comment>
+						</xml_username>
+						<xml_password translate="label">
+							<label>Xml Password</label>
+							<frontend_type>password</frontend_type>
+							<backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[The password used to connect to ingram micro endpoint]]></comment>
+						</xml_password>
+						
+					</fields>
+				</xmllogin>
+			</groups>
+		</osf_ingrammicro>
+	</sections>
+</config>

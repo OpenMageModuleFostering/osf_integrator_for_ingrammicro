@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/OSF_Integrator_for_IngramMicro",
+    "type": "magento-module",
+    "license": "End-User-License-Agreement-(EULA)",
+    "homepage": "",
+    "description": "Automated flow for IngramMicro integration from product import to ship notification",
+    "authors": [
+    {
+        "name": "OSF Global",
+        "email": "chris.hooven@osf-global.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

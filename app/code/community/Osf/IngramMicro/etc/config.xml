@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Osf Global Services
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+-->
+<config>
+	<modules>
+		<Osf_IngramMicro>
+			<version>1.0.0</version>
+		</Osf_IngramMicro>
+	</modules>
+	<global>
+		 <blocks>
+            <osf_ingrammicro>
+                <class>Osf_IngramMicro_Block</class>
+            </osf_ingrammicro>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_view_tab_shipments>Osf_IngramMicro_Block_Adminhtml_Shipments</sales_order_view_tab_shipments>
+                    <sales_shipment_grid>Osf_IngramMicro_Block_Adminhtml_Shipments_Grid</sales_shipment_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+		<models>
+			<osf_ingrammicro>
+				<class>Osf_IngramMicro_Model</class>
+				<resourceModel>osf_ingrammicro_resource</resourceModel>syn
+			</osf_ingrammicro>
+			<osf_ingrammicro_resource>
+				<class>Osf_IngramMicro_Model_Resource</class>
+				<entities>
+					<queue>
+						<table>osf_ingrammicro_queue</table>
+					</queue>
+					<catmap>
+						<table>osf_ingrammicro_catmap</table>
+					</catmap>
+				</entities>
+			</osf_ingrammicro_resource>
+		</models>
+		 <resources>
+			<osf_ingrammicro_setup>
+				<setup>
+					<module>Osf_IngramMicro</module>
+					<!-- default, optional -->
+					<class>Mage_Core_Model_Resource_Setup</class>
+				</setup>
+			</osf_ingrammicro_setup>
+		</resources>
+		<helpers>
+		   <osf_ingrammicro>
+				<class>Osf_IngramMicro_Helper</class>
+		   </osf_ingrammicro>
+		</helpers>
+		<events>
+			<sales_order_save_after>
+				<observers>
+					<osf_sales_order_save_after>
+						<type>singleton</type>
+						<class>Osf_IngramMicro_Model_Observer</class>
+						<method>processOrder</method>
+					</osf_sales_order_save_after>
+				</observers>
+			</sales_order_save_after>
+		</events>
+	</global>
+	<frontend>
+		<routers>
+			<osf_ingrammicro>
+				<use>standard</use>
+				<args>
+					<module>Osf_IngramMicro</module>
+					<frontName>ingrammicro</frontName>
+				</args>
+			</osf_ingrammicro>
+		</routers>
+	</frontend>
+	 <adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<osf_ingrammicro module="osf_ingrammicro">
+							<title>Ingram Micro Configuration</title>
+							<sort_order>11</sort_order>
+						</osf_ingrammicro>
+						<system>
+							<children>
+								<config>
+									<children>
+										<osf_ingrammicro translate="title">
+											<title>Ingram Micro Configuration</title>
+											<sort_order>80</sort_order>
+										</osf_ingrammicro>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<crontab>
+		<jobs>
+			<osf_ingrammicro_process>
+				<schedule>
+					<cron_expr>0 1 * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>osf_ingrammicro/import::processData</model>
+				</run>
+			</osf_ingrammicro_process>
+			<osf_ingrammicro_retry>
+				<schedule>
+					<cron_expr>0 * * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>osf_ingrammicro/order::retry</model>
+				</run>
+			</osf_ingrammicro_retry>
+		</jobs>
+	</crontab>
+</config>
