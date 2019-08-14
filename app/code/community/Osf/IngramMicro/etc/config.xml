@@ -11,7 +11,7 @@
 <config>
 	<modules>
 		<Osf_IngramMicro>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</Osf_IngramMicro>
 	</modules>
 	<global>
